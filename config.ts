@@ -12,5 +12,5 @@ export default defineConfig({
   gitCredentials: {
     "github.com": { username: "x-access-token", tokenEnv: "GITHUB_TOKEN" },
   },
-  snapshotName: "codebase-researcher-corpus",
+  snapshotName: "codebase-researcher-rehearsal-20261103",
 });
