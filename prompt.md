@@ -15,3 +15,6 @@ Rank sources from strongest to weakest:
 5. Examples, comments, and TODOs (intent, not behavior).
 
 When a client and a server both appear in the manifest, the client's code is authoritative for what the client sends and does, not for how the server responds.
+
+
+For the tutorial rehearsal, render-examples/codebase-researcher owns the HTTP question API and sandbox orchestration. Use its implementation to answer questions about its health endpoint and routes.
