@@ -5,13 +5,13 @@
 # doesn't reliably prompt for sync: false values inside env groups. A value left blank counts as unset.
 
 projects:
-  - name: codebase-researcher
+  - name: codebase-researcher-rehearsal-20261103
     environments:
       - name: production
         services:
           # HTTP API with no UI: `/` returns 404. Check `/healthz` (returns ok) or ask with `pnpm ask`.
           - type: web
-            name: codebase-researcher-api
+            name: codebase-researcher-rehearsal-20261103-api
             runtime: node
             region: oregon
             # Free is enough: it spins down when idle, so the first request afterward waits for a cold start,
@@ -32,11 +32,11 @@ projects:
               - key: WORKFLOW_SLUG
                 fromService:
                   type: workflow
-                  name: codebase-researcher-workflow
+                  name: codebase-researcher-rehearsal-20261103-workflow
                   property: slug
 
           - type: workflow
-            name: codebase-researcher-workflow
+            name: codebase-researcher-rehearsal-20261103-workflow
             runtime: node
             region: oregon
             buildCommand: pnpm install --frozen-lockfile
@@ -60,7 +60,7 @@ projects:
                 value: allow-list
 
           - type: cron
-            name: codebase-researcher-snapshots
+            name: codebase-researcher-rehearsal-20261103-snapshots
             runtime: node
             region: oregon
             # Bundling the runner needs more than starter's 512 MB; the build is killed without a log line.
